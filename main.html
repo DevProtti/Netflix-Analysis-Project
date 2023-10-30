@@ -7532,7 +7532,7 @@ a.anchor-link {
 <span class="k">def</span> <span class="nf">transform_excel_to_csv</span><span class="p">(</span><span class="n">source_path</span><span class="p">,</span> <span class="n">source_file_name</span><span class="p">,</span> <span class="n">sheet_name</span><span class="p">,</span> <span class="n">new_file_name</span><span class="p">):</span>
     <span class="n">source_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">source_path</span><span class="p">,</span> <span class="n">source_file_name</span><span class="p">)</span>
     <span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">source_file_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">)</span>
-    <span class="n">pandas_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'./</span><span class="si">{</span><span class="n">source_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">new_file_name</span><span class="si">}</span><span class="s1">.csv'</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">pandas_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">source_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">new_file_name</span><span class="si">}</span><span class="s1">.csv'</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     
 
 <span class="n">source_path</span> <span class="o">=</span> <span class="s1">'data'</span>
@@ -7562,7 +7562,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="1st-Question:">1st Question:<a class="anchor-link" href="#1st-Question:">¶</a></h2><pre><code>&gt; Topics:
-    - Read the dataset
+    - Read the dataset NFLX Top 10
     - Filter the data (ignoring the week of May 22nd and getting only TV (English) category)
     - Count how many times each show title appeared in the dataset
     - Select the title with the most appearances</code></pre>
@@ -7634,7 +7634,8 @@ The most frequent English-language TV show in the NFLX Top 10 dataset was "Stran
     - Read the datasets (NFTL_Top_10 and IMDB_Rating)
     - Filter the data (ignoring the week of May 22nd and getting only Films (English) category)
     - Relate the datasets by show title name
-    - Get the weekly_hours_viewed for each week</code></pre>
+    - Get the title with the lowest rating
+    - Get the average from weekly_hours_viewed from each week</code></pre>
 </div>
 </div>
 </div>
@@ -7788,7 +7789,8 @@ The title with the lowest rating was "365 Days: This Day", with a rating of 2.5
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">¶</a></h2><pre><code>&gt; Topics:
     - Filter the top 10 Dataset to get Films (Non-English) only
-    - Order by de the cumulative_weeks_in_top_10 de
+    - Order by the cumulative_weeks_in_top_10
+    - Get the title that spent the most time in top 10 weeks
     - Estimate the total viewers</code></pre>
 </div>
 </div>
@@ -7800,7 +7802,7 @@ The title with the lowest rating was "365 Days: This Day", with a rating of 2.5
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Determining the title that has spent the most time in the top 10 week</p>
+<p>Determining the title that spent the most time in the top 10 week</p>
 </div>
 </div>
 </div>
